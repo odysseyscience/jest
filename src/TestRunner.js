@@ -108,10 +108,10 @@ TestRunner.prototype._getModuleLoaderResourceMap = function() {
   if (this._moduleLoaderResourceMap === null) {
     if (this._opts.useCachedModuleLoaderResourceMap) {
       this._moduleLoaderResourceMap =
-        ModuleLoader.loadResourceMapFromCacheFile(this._config);
+        ModuleLoader.loadResourceMapFromCacheFile(this._config, this._opts);
     } else {
       this._moduleLoaderResourceMap =
-        ModuleLoader.loadResourceMap(this._config);
+        ModuleLoader.loadResourceMap(this._config, this._opts);
     }
   }
   return this._moduleLoaderResourceMap;

@@ -73,6 +73,9 @@ function _testRunnerOptions(argv) {
   if (argv.maxWorkers) {
     options.maxWorkers = argv.maxWorkers;
   }
+  if (argv.maxProcesses) {
+    options.maxProcesses = argv.maxProcesses;
+  }
   return options;
 }
 
